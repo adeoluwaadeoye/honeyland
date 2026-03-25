@@ -4,6 +4,7 @@ import { Cormorant, Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import { AuthProvider } from "@/context/AuthContext";
 
 // Google Fonts
 const cormorant = Cormorant({
@@ -23,18 +24,19 @@ export const metadata: Metadata = {
   description: "Official website of Honeyland Community Development, Ifo, Ogun State",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
-      lang="en" data-scroll-behavior="smooth"
+      lang="en"
+      data-scroll-behavior="smooth"
       className={`${cormorant.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <AuthProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

@@ -17,7 +17,7 @@
 │   │   │
 │   │   ├── properties
 │   │   │   ├── page.tsx
-│   │   │   ├── new/page.tsx
+│   │   │   ├── new/page.tsx 
 │   │   │   └── [id]/edit/page.tsx
 │   │
 │   ├── /api                     # Backend routes
@@ -47,9 +47,9 @@
 │   │
 │   ├── /layout
 │   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
+│   │   ├── Footer.tsx 
 │   │   └── Container.tsx
-│   │
+│   │ 
 │   ├── /shared
 │   │   ├── SectionHeader.tsx
 │   │   ├── EmptyState.tsx
