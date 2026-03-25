@@ -80,7 +80,7 @@
 │   │       └── propertyService.ts
 │   │
 │   ├── /contact
-│   │   ├── /components
+│   │   ├── /components 
 │   │   │   └── ContactForm.tsx
 │   │   │
 │   │   └── /services
@@ -96,7 +96,7 @@
 │   ├── auth.ts                  # JWT helpers
 │   └── cloudinary.ts
 │
-├── /models                      # Database schemas
+├── /models                      # Database schemas 
 │   ├── User.ts
 │   ├── Property.ts
 │   └── Lead.ts
