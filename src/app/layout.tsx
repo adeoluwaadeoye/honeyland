@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   creator: "Honeyland CDA",
 
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
+    icon: "/eco.png",
+    shortcut: "/eco.png",
     apple: "/apple-touch-icon.png",
   },
 
