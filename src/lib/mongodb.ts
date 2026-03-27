@@ -3,21 +3,11 @@ import { MongoClient } from "mongodb";
 const uri = process.env.MONGODB_URI;
 
 if (!uri) {
-  throw new Error("MONGODB_URI missing");
+  throw new Error("MONGODB_URI is missing");
 }
 
-const options = {
-  maxPoolSize: 10,
-  serverSelectionTimeoutMS: 5000,
-  socketTimeoutMS: 45000,
-};
+const client = new MongoClient(uri);
 
-declare global {
-  var _mongoClientPromise: Promise<MongoClient> | undefined;
-}
-
-const clientPromise: Promise<MongoClient> =
-  global._mongoClientPromise ??
-  (global._mongoClientPromise = new MongoClient(uri, options).connect());
+const clientPromise = client.connect();
 
 export default clientPromise;
