@@ -67,6 +67,7 @@ export default function NewsPage() {
                                 src={item.image}
                                 alt={item.imageAlt}
                                 fill
+                                sizes=""
                                 className="object-cover"
                             />
                         </div>
@@ -108,6 +109,7 @@ export default function NewsPage() {
                                     src={item.image}
                                     alt={item.imageAlt}
                                     fill
+                                    sizes=""
                                     className="object-cover"
                                 />
                             </div>
