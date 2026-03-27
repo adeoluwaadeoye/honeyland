@@ -1,13 +1,19 @@
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_URI;
+let client: MongoClient | null = null;
 
-if (!uri) {
-  throw new Error("MONGODB_URI is missing");
+export async function connectToDB() {
+  const uri = process.env.MONGODB_URI;
+
+  if (!uri) {
+    throw new Error("MONGODB_URI is not set");
+  }
+
+  // Reuse connection (important for serverless)
+  if (client) return client;
+
+  client = new MongoClient(uri);
+  await client.connect();
+
+  return client;
 }
-
-const client = new MongoClient(uri);
-
-const clientPromise = client.connect();
-
-export default clientPromise;
