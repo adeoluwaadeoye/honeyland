@@ -2,15 +2,12 @@
 
 import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
-import HeroPanel from "@/components/shared/HeroPanel";
 
 export default function AboutUsSection() {
   
   return (
     <section className="relative py-24 bg-white">
-      {/* Hero Section */}
-      <HeroPanel title="About Us" />
-
+  
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 flex flex-col gap-12">
         

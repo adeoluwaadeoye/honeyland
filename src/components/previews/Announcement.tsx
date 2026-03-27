@@ -7,10 +7,10 @@ import SafeMotion from "@/app/features/utils/SafeMotion";
 
 export default function AnnouncementIntro() {
   return (
-    <section className="relative h-full py-2 bg-[url('/assets/bg-logo.png')] bg-center bg-no-repeat bg-contain bg-fixed">
+    <section className="relative h-full py-2 bg-[url('/assets/bg1.jpg')] bg-center bg-no-repeat bg-contain bg-fixed">
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/92"></div>
+      <div className="absolute inset-0 bg-white/20"></div>
 
       <div className="relative max-w-4xl mx-auto text-center px-4 z-10">
         

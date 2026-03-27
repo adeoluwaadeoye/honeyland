@@ -72,3 +72,9 @@ h1, h2, h3, h4, h5, h6 {
 button:focus {
   outline: none;
 }
+
+
+/* globals.css */
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';

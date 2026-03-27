@@ -6,7 +6,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import HeroPanel from "@/components/shared/HeroPanel";
 
 export default function HistoryPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -22,10 +21,8 @@ export default function HistoryPage() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
-    <section className="py-24 bg-white">
-      <HeroPanel
-              title="Our History"
-            />
+    <section className="py-24 bg-white mt-8">
+      
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* HEADER */}
         <div className="max-w-5xl mb-12">
@@ -141,7 +138,7 @@ export default function HistoryPage() {
 
         {/* LEADERSHIP HIGHLIGHT */}
         <div className="mb-12 border-b border-gray-300 bg-gray-50 p-4">
-          <h3 className="text-4xl font-semibold text-gray-900 mb-6">
+          <h3 className="text-3xl font-semibold text-gray-900 mb-6">
             Leadership That Shaped Our Growth
           </h3>
           <div className="grid md:grid-cols-2 gap-8 text-gray-700 leading-relaxed mt-5">

@@ -3,16 +3,13 @@
 import Image from "next/image";
 import { leadershipTenures } from "@/data/leadership";
 import SectionHeader from "@/components/shared/SectionHeader";
-import HeroPanel from "@/components/shared/HeroPanel";
 
 export default function LeadershipPage() {
   const pastTenures = leadershipTenures.slice(0, 2); // 2019–2022 & 2022–2025
   const presentTenure = leadershipTenures[2]; // 2025–Present
 
   return (
-    <section className="bg-white py-24">
-      <HeroPanel title="Our Leaders" />
-
+    <section className="bg-white py-24 mt-12">
       {/* Page Header */}
       <SectionHeader
         label="Our Leadership"

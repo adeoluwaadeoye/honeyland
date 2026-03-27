@@ -3,7 +3,7 @@ export const leadershipTenures = [
     tenure: "2019 – 2022",
     chairman: {
       name: "Mr. John Doe",
-      img: "/assets/chairman.jpg",
+      img: "/assets/sample.jpg",
       writeup:
         "Mr. John Doe led the 2019–2022 administration with a focus on community engagement, infrastructure, and sanitation. Under his leadership, several skill-building and education initiatives were successfully implemented.",
     },
@@ -28,7 +28,7 @@ export const leadershipTenures = [
     tenure: "2022 – 2025",
     chairman: {
       name: "Mr. Alice Johnson",
-      img: "/assets/chairman.jpg",
+      img: "/assets/sample.jpg",
       writeup:
         "Mr. Alice Johnson led the 2022–2025 administration, prioritizing sustainable growth, sanitation, and education programs. Key achievements include enhanced community services and skill-building workshops.",
     },
@@ -53,7 +53,7 @@ export const leadershipTenures = [
     tenure: "2025 – Present",
     chairman: {
       name: "Adeoluwa Adeoye",
-      img: "/assets/chairman.jpg",
+      img: "/assets/sample.jpg",
       writeup:
         "Adeoluwa Adeoye leads the current administration with a focus on sustainable development, community empowerment, and innovative infrastructure. Key achievements include modern sanitation solutions, strategic skill-building programs, and robust community engagement initiatives.",
     },

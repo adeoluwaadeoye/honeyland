@@ -35,6 +35,7 @@ export default function Footer() {
             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
             <li><Link href="/events" className="hover:text-white">Events</Link></li>
             <li><Link href="/donate" className="hover:text-white">Donate</Link></li>
+            <li><Link href="/resources" className="hover:text-white">Resources</Link></li>
           </ul>
         </div>
 
@@ -54,7 +55,7 @@ export default function Footer() {
             ))}
           </ul>
 
-          <div className="mt-4 space-y-1 text-sm text-gray-200">
+          <div className="mt-4 space-y-3 text-sm text-gray-200">
             <h3 className="text-lg font-normal tracking-wide">Contact Us</h3>
             <p className="mt-4">Honeyland CDA Headquarters</p>
             <p>123 Community Drive, Lagos, Nigeria</p>
@@ -97,7 +98,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row justify-between items-center">
           <p>&copy; {year} Honeyland CDA.</p>
           <p className="mt-2 md:mt-0 text-center">
-            Powered by <Link href="https://adeoluwaadeoye.netlify.app" className="hover:text-white underline">ZyroTech Digital</Link>
+            Powered by <Link href="https://adeoluwaadeoye.netlify.app" className="hover:text-white">ZyroTech Digital</Link>
           </p>
         </div>
       </div>

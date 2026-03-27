@@ -33,7 +33,7 @@ export default function LeaderPreview() {
             className="relative w-full max-w-md lg:max-w-lg h-100 overflow-hidden mx-auto lg:mx-0"
           >
             <Image
-              src="/assets/chairman.jpg"
+              src="/assets/sample.jpg"
               alt="Chairman Oloni Adebola"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

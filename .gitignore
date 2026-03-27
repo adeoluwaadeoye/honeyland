@@ -32,6 +32,8 @@
 # ============================
 # Ignore all env files (secrets)
 .env*
+.env.*.local
+.env.local
 # But allow example/template file
 !.env.example
 
