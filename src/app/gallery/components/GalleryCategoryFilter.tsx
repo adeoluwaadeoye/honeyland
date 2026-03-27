@@ -1,83 +1,4 @@
 
-// "use client";
-
-// import { useMemo, useState } from "react";
-// import Image from "next/image";
-// import { GalleryProjects } from "@/data/galleryProjects";
-
-// const categories = ["All", "Events", "Infrastructure", "Community"];
-
-// export default function GalleryCategoryFilter() {
-//   const [active, setActive] = useState("all");
-
-//   const filteredProjects = useMemo(() => {
-//     if (active === "All") return GalleryProjects;
-
-//     return GalleryProjects.filter(
-//       (p) => p.category === active
-//     );
-//   }, [active]);
-
-//   return (
-//     <div className="space-y-8">
-
-//       {/* FILTER */}
-//       <div className="w-full max-w-sm">
-//         <label
-//           htmlFor="category-filter"
-//           className="block text-sm font-medium mb-2"
-//         >
-//           Filter Gallery
-//         </label>
-
-//         <select
-//           id="category-filter"
-//           value={active}
-//           onChange={(e) => setActive(e.target.value)}
-//           className="w-full border-b border-t border-gray-400 px-4 py-3 text-sm focus:outline-none"
-//         >
-//           {categories.map((cat) => (
-//             <option key={cat} value={cat}>
-//               {cat}
-//             </option>
-//           ))}
-//         </select>
-//       </div>
-
-//       {/* GRID */}
-//       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-//         {filteredProjects.map((project) => (
-//           <div
-//             key={project.id}
-//             className="relative overflow-hidden  border-b border-gray-400 bg-white group"
-//           >
-//             <div className="relative w-full h-64">
-//               <Image
-//                 src={project.image}
-//                 alt={project.title}
-//                 fill
-//                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-//                 className="object-cover group-hover:scale-105 transition"
-//               />
-//             </div>
-
-//             <div className="p-4">
-//               <h3 className="font-medium text-lg">
-//                 {project.title}
-//               </h3>
-
-//               <p className="text-sm text-gray-500">
-//                 {project.category}
-//               </p>
-//             </div>
-//           </div>
-//         ))}
-//       </section>
-
-//     </div>
-//   );
-// }
-
 "use client";
 
 import { useMemo, useState, useTransition } from "react";
@@ -195,6 +116,7 @@ export default function GalleryCategoryFilter() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

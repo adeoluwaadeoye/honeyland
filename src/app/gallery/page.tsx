@@ -1,10 +1,10 @@
 "use client";
 
+import { Suspense } from "react";
 import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 import GallerySlider from "@/app/gallery/components/GallerySlider";
 import GalleryCategoryFilter from "./components/GalleryCategoryFilter";
-
 
 export const dynamic = "force-static";
 
@@ -41,11 +41,22 @@ export default function GalleryPage() {
         </p>
       </section>
 
+      {/* Section 3 */}
       <section className="max-w-7xl mx-auto px-4 py-12 mt-2">
-        <GalleryCategoryFilter />
+        <Suspense
+          fallback={
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div key={i} className="h-80 bg-gray-200 animate-pulse" />
+              ))}
+            </div>
+          }
+        >
+          <GalleryCategoryFilter />
+        </Suspense>
       </section>
 
-      {/* SECTION 3 */}
+      {/* SECTION 4 */}
       <section className="mt-8">
         <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-2">
           Honeyland Community Project Gallery
@@ -53,18 +64,15 @@ export default function GalleryPage() {
         <GallerySlider />
       </section>
 
-      {/* SECTION 4 */}
+      {/* SECTION 5 */}
       <section className="space-y-6">
         <h3 className="text-3xl md:text-4xl mb-4">
           Street Lighting Enhancement Through Concrete Poles Installation
         </h3>
+
         <p className="text-gray-700 text-2xl leading-relaxed mt-2">
           The concrete poles project marked a significant step forward in improving both
-          safety and infrastructure within the community. For years, residents had to
-          deal with poorly lit streets, unstable wooden poles, and constant concerns
-          about security, especially at night. This initiative was introduced as a
-          long-term solution to address those challenges and create a more secure and
-          structured environment.
+          safety and infrastructure within the community...
         </p>
 
         <div className="relative w-full h-125 rounded-sm overflow-hidden">
@@ -78,18 +86,11 @@ export default function GalleryPage() {
         </div>
 
         <p className="text-gray-700 text-2xl leading-relaxed mt-2">
-          Through the collective effort of residents, contributions were made, plans were
-          executed, and installations were carried out across key areas of the community.
-          The introduction of durable concrete poles not only improved street lighting
-          but also enhanced overall visibility and reduced security risks. Today, the
-          impact is evident — safer streets, improved night-time movement, and a stronger
-          sense of confidence among residents.
+          Through the collective effort of residents...
         </p>
 
         <p className="text-gray-700 text-2xl leading-relaxed mt-2">
-          Beyond infrastructure, the project stands as a powerful example of what unity
-          and shared responsibility can achieve. It reflects a community that is not
-          waiting for change, but actively building it — one project at a time.
+          Beyond infrastructure, the project stands as a powerful example...
         </p>
       </section>
 

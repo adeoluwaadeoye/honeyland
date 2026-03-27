@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import clientPromise from "@/lib/mongodb"; // ✅ FIXED
+import clientPromise from "@/lib/mongodb"; 
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: "Missing fields" }, { status: 400 });
   }
 
-  const client = await clientPromise; // ✅ FIXED
+  const client = await clientPromise; 
   const db = client.db("honeyland");
 
   const user = await db.collection("users").findOne({ email });
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
   }
 
   const token = jwt.sign(
-    { id: user._id.toString(), email }, // ✅ safer
+    { id: user._id.toString(), email }, 
     JWT_SECRET,
     { expiresIn: "1d" }
   );
