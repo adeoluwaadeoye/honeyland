@@ -22,7 +22,7 @@ const slides: Slide[] = [
     description:
       "A unified community focused on delivering real infrastructure driven by collective responsibility.",
     image: "/assets/hero3.jpg",
-    cta: { label: "Learn More", href: "/about-us" },
+    cta: { label: "Learn More", href: "/about/about-us" },
   },
   {
     label: "Infrastructure",
@@ -31,7 +31,7 @@ const slides: Slide[] = [
     description:
       "We execute impactful projects including electricity, drainage systems, and road networks that improve everyday living.",
     image: "/assets/hero1.jpg",
-    cta: { label: "View Projects", href: "/projects" },
+    cta: { label: "View Projects", href: "/projects/current" },
   },
   {
     label: "Sustainability",
@@ -40,7 +40,7 @@ const slides: Slide[] = [
     description:
       "Our initiatives are designed for long-term value — empowering youth, strengthening systems, and improving livelihoods.",
     image: "/assets/hero2.jpg",
-    cta: { label: "See Impact", href: "/projects" },
+    cta: { label: "See Impact", href: "/impact/community" },
   },
 ];
 
