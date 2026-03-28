@@ -62,13 +62,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* ==========================
-   Smooth scroll for anchor links
-========================== */
-:target {
-  scroll-margin-top: 4rem; /* adjust if you have a fixed header */
-}
-
 button:focus {
   outline: none;
 }

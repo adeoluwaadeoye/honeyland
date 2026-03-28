@@ -83,7 +83,7 @@ export default function ProjectPreview() {
             {/* VIEW ALL */}
             <div className="col-span-2 text-left mt-4">
               <Link
-                href="/projects"
+                href="/projects/current"
                 className="inline-block bg-green-600 text-white px-6 py-3 font-medium hover:bg-emerald-800 transition-colors"
               >
                 See Projects

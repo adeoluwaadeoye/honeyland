@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://honeylandcda.netlify.app/bg.jpg",
         width: 1200,
         height: 630,
         alt: "Honeyland CDA",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Honeyland CDA",
     description:
       "Building sustainable community growth and development in Ifo, Ogun State.",
-    images: ["/og-image.jpg"],
+    images: ["https://adeoluwaadeoye.netlify.app/bg.jpg"],
   },
 
   metadataBase: new URL("https://honeyladcda.netlify.app"),
@@ -85,7 +85,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans">
         <AuthProvider>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main>{children}</main>
           <Footer />
         </AuthProvider>
       </body>

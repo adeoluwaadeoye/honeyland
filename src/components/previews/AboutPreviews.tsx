@@ -35,7 +35,7 @@ export default function AboutPreview() {
             Every project we undertake is more than just concrete and steel — it’s about fostering growth, empowering residents, and creating spaces where communities can thrive. We work closely with stakeholders to ensure every initiative reflects the values and needs of those we serve.
           </p>
           <Link
-            href="/projects"
+            href="/about/about-us"
             className="inline-block mt-4 px-6 py-3 bg-green-600 text-white font-medium hover:bg-green-700 transition-colors duration-200"
           >
             Know More
