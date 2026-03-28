@@ -7,7 +7,7 @@ import { PlayCircle } from "lucide-react";
 
 export default function CommunityPage() {
   return (
-    <section className="py-16 md:py-24 bg-white mt-12">
+    <section className="py-16 md:py-24 bg-white mt-16">
       <div className="max-w-6xl mx-auto px-4 md:px-6 flex flex-col gap-12">
 
         {/* Header */}
@@ -31,15 +31,16 @@ export default function CommunityPage() {
 
         {/* Video */}
         <div>
-          <h2 className="text-xl md:text-2xl font-semibold mb-6">
+          <h2 className="text-2xl font-bold text-center md:text-2xl mb-6">
             See Our Community in Action
           </h2>
 
-          <div className="relative w-full aspect-video rounded-xl overflow-hidden group">
+          <div className="relative w-full mt-4 aspect-video rounded-xl overflow-hidden group">
             <video
               controls
               className="w-full h-full object-cover"
               src="/assets/cda.mp4"
+              preload="none"
             />
             <PlayCircle className="absolute inset-0 m-auto w-14 h-14 text-white opacity-70 pointer-events-none group-hover:scale-110 transition" />
           </div>
@@ -76,6 +77,7 @@ export default function CommunityPage() {
                       src={item.img}
                       alt={item.name}
                       fill
+                      sizes=""
                       className="object-cover"
                     />
                   </div>
