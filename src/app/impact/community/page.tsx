@@ -96,9 +96,9 @@ export default function CommunityPage() {
 
 
                 {/*CTA */}
-                <div className="p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="p-10 flex  bg-green-600  text-white flex-col md:flex-row items-center justify-between gap-6">
                     <div>
-                        <h3 className="text-xl font-semibold">
+                        <h3 className="text-2xl font-semibold">
                             Be Part of the Change
                         </h3>
                         <p className="mt-1">
@@ -107,8 +107,8 @@ export default function CommunityPage() {
                     </div>
 
                     <Link
-                        href="/get-involved" // replace with your target URL
-                        className="bg-green-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition inline-block text-center"
+                        href="/levies" // replace with your target URL
+                        className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition inline-block text-center"
                     >
                         Get Involved
                     </Link>
