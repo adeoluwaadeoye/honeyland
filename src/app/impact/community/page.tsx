@@ -7,7 +7,7 @@ import { PlayCircle } from "lucide-react";
 
 export default function CommunityPage() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white mt-12">
       <div className="max-w-6xl mx-auto px-4 md:px-6 flex flex-col gap-12">
 
         {/* Header */}
