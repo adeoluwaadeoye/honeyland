@@ -9,7 +9,7 @@ export async function connectToDB() {
     throw new Error("MONGODB_URI is not set");
   }
 
-  // Reuse connection (important for serverless)
+  // Reuse connection (important for serverless environments)
   if (client) return client;
 
   client = new MongoClient(uri);

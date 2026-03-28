@@ -1,13 +1,13 @@
-// /src/app/api/auth/signup/route.ts
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import clientPromise from "@/lib/mongodb";
+import { connectToDB } from "@/lib/mongodb";
 
 export async function POST(req: Request) {
   try {
     const { name, email, password } = await req.json();
 
+    //Validate input
     if (!name || !email || !password) {
       return NextResponse.json(
         { message: "Missing fields" },
@@ -15,15 +15,22 @@ export async function POST(req: Request) {
       );
     }
 
-    //Validate env properly (runtime safe)
+    //Validate environment variable
     const JWT_SECRET = process.env.JWT_SECRET;
+
     if (!JWT_SECRET) {
-      throw new Error("JWT_SECRET is missing in environment variables");
+      console.error("JWT_SECRET missing");
+      return NextResponse.json(
+        { message: "Server misconfigured" },
+        { status: 500 }
+      );
     }
 
-    const client = await clientPromise;
+    //Connect to DB safely (no build-time execution)
+    const client = await connectToDB();
     const db = client.db("honeyland");
 
+    //Check if user already exists
     const existingUser = await db.collection("users").findOne({ email });
 
     if (existingUser) {
@@ -33,8 +40,10 @@ export async function POST(req: Request) {
       );
     }
 
+    //Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    //Insert new user
     const newUser = await db.collection("users").insertOne({
       name,
       email,
@@ -42,15 +51,20 @@ export async function POST(req: Request) {
       createdAt: new Date(),
     });
 
+    //Generate JWT
     const token = jwt.sign(
       { id: newUser.insertedId.toString(), email },
       JWT_SECRET,
       { expiresIn: "1d" }
     );
 
-    return NextResponse.json({ token, name });
-  } catch (err) {
-    console.error("Signup error:", err);
+    return NextResponse.json({
+      token,
+      name,
+    });
+
+  } catch (error) {
+    console.error("Signup error:", error);
 
     return NextResponse.json(
       { message: "Something went wrong" },
