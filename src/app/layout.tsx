@@ -31,11 +31,11 @@ export const metadata: Metadata = {
     "Ifo Ogun State",
     "Nigeria community development",
   ],
-  authors: [{ name: "Honeyland CDA" }],
-  creator: "Honeyland CDA",
+  authors: [{ name: "Adeoluwa Adeoye" }],
+  creator: "Adeoluwa A",
 
   icons: {
-    icon: "/eco.png",
+    icon: "/favicon.png",
     shortcut: "/eco.png",
     apple: "/apple-touch-icon.png",
   },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Honeyland Community Development Association",
     description:
       "Building sustainable community growth and development in Ifo, Ogun State.",
-    url: "https://your-domain.com",
+    url: "https://honeylandcda.netlify.app",
     siteName: "Honeyland CDA",
     type: "website",
     images: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Honeyland CDA",
     description:
       "Building sustainable community growth and development in Ifo, Ogun State.",
-    images: ["https://adeoluwaadeoye.netlify.app/bg.jpg"],
+    images: ["https://honeylandcda.netlify.app/bg.jpg"],
   },
 
   metadataBase: new URL("https://honeyladcda.netlify.app"),
